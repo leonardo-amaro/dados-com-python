@@ -12,6 +12,8 @@ dados = {
 df = pd.DataFrame(dados) # Carregando os dados dentro do DataFrame
 vendas_a = df.loc[df["Produto"] == "A"]
 vendas_b = df.loc[df["Produto"] == "B"]
+vendas_c = df.loc[df["Produto"] == "C"]
 
 print(f"Média de vendas do produto A: {vendas_a['Vendas'].mean()}")
 print(f"Média de vendas do produto B: {vendas_b['Vendas'].mean()}")
+print(f"Média de vendas do produto C: {vendas_c['Vendas'].mean()}")
