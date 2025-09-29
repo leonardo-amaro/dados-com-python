@@ -9,15 +9,9 @@ numeros = list(range(1, 51))
 # - "FizzBuzz" se n for múltiplo de 3 e 5
 # - Caso contrário, apenas n
 
-def fizzbuzz(inteiro):
-    if inteiro % 3 == 0 and inteiro % 5 == 0:
-        return "FizzBuzz"
-    elif inteiro % 3 == 0:
-        return "Fizz"
-    elif inteiro % 5 == 0:
-        return "Buzz"
-    else:
-        return inteiro
-
-fizzbuzz_tupla = [(n, fizzbuzz(n)) for n in numeros]
+fizzbuzz_tupla = [(n,
+                   "FizzBuzz" if n % 3 == 0 and n % 5 == 0
+                   else "Fizz" if n % 3 == 0
+                   else "Buzz" if n % 5 == 0
+                   else n) for n in numeros]
 print(fizzbuzz_tupla)
